@@ -1,0 +1,91 @@
+/* Inconsistent color scheme - using different shades of blue */
+body {
+    font-family: Arial;
+    /* Missing fallback fonts */
+    color: #333;
+    margin: 0;
+    /* No box-sizing reset */
+}
+
+/* Inconsistent selectors - sometimes using classes, sometimes IDs */
+header {
+    background-color: #2a75bb;
+    padding: 15px;
+}
+
+#nav {
+    float: right;
+    /* Outdated float-based layout */
+}
+
+/* Navigation styling with issues */
+nav ul {
+    display: inline-block;
+}
+
+nav li {
+    display: inline;
+    margin-left: 10px;
+    /* Inconsistent spacing */
+}
+
+nav a {
+    color: white;
+    /* Missing text-decoration */
+    /* No hover state */
+}
+
+/* Buttons with inconsistent styling */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* Missing responsive design for mobile */
+
+/* Typography issues */
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 20px;
+    /* Inconsistent sizing ratios */
+}
+
+/* Card component with layout issues */
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    /* Fixed width that won't work responsively */
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Problematic footer styling */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    /* Missing padding */
+    /* No flex layout for organizing content */
+}
+
+/* Event cards with overflow issues */
+.event-cards {
+    /* No display property for layout */
+}
+
+/* Missing media queries */

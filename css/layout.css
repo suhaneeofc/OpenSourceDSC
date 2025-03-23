@@ -1,0 +1,50 @@
+/* Layout issues with fixed widths */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    /* No max-width for responsiveness */
+}
+
+/* Problematic grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* No gap property */
+    /* No media queries for responsive behavior */
+}
+
+/* Hero section layout problems */
+.hero-section {
+    height: 400px;
+    /* Using fixed height instead of min-height */
+    background-image: url("../images/hero.jpg");
+    /* No background size or position */
+    padding: 20px;
+    /* Text not centered */
+}
+
+/* Featured events section */
+.featured-events {
+    padding: 20px;
+    /* No proper spacing between cards */
+}
+
+.event-cards {
+    /* Should use grid or flexbox but doesn't */
+}
+
+/* Team section layout */
+.team-preview table {
+    width: 100%;
+    /* Missing proper table styling */
+}
+
+/* About page specific layout */
+.timeline {
+    /* No layout defined for timeline items */
+}
+
+/* Missing responsive adjustments */
+@media (max-width: 768px) {
+    /* Empty media query */
+}
