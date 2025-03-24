@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery - Tech Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- Missing custom gallery stylesheet -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <!-- Missing main tag -->
+    <div class="gallery-header">
+        <h1>Our Event Gallery</h1>
+        <p>Memories from our past events and activities</p>
+        
+        <!-- Filter controls without proper accessibility -->
+        <div class="gallery-filters">
+            <span class="active" onclick="filterGallery('all')">All</span>
+            <span onclick="filterGallery('hackathon')">Hackathons</span>
+            <span onclick="filterGallery('workshop')">Workshops</span>
+            <span onclick="filterGallery('social')">Social Events</span>
+        </div>
+    </div>
+    
+    <!-- Gallery container with no semantic structure -->
+    <div class="gallery-container">
+        <!-- Images will be loaded by JavaScript -->
+        <!-- Placeholder for empty state -->
+        <p class="empty-gallery">Loading gallery images...</p>
+    </div>
+    
+    <!-- Missing pagination controls -->
+    
+    <!-- Lightbox that doesn't work -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+    
+    <!-- Upload section with form issues -->
+    <div class="upload-section">
+        <h2>Share Your Photos</h2>
+        <p>Have photos from our events? Share them with the community!</p>
+        <form>
+            <!-- Missing form labels -->
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <select>
+                <option value="">-- Select Event --</option>
+                <option value="hackathon">Hackathon 2024</option>
+                <option value="workshop">Python Workshop</option>
+                <option value="social">End of Year Party</option>
+            </select>
+            <input type="file" accept="image/*">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-col">
+            <h3>Tech Club</h3>
+            <p>Fostering innovation and community among tech enthusiasts.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p>Email: info@techclub.edu</p>
+            <p>Location: Tech Building, Room 101</p>
+        </div>
+        <div class="copyright">
+            <p>© Tech Club 2025. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <!-- Missing gallery-specific JavaScript -->
+</body>
+</html>

@@ -1,50 +1,192 @@
-/* Layout issues with fixed widths */
+/* Layout system with improved design but intentional issues */
+
+/* Container with better defaults but still problematic */
 .container {
-    width: 1000px;
+    width: 1200px; /* Fixed width */
     margin: 0 auto;
-    /* No max-width for responsiveness */
+    padding: 0 15px;
+    /* No max-width for proper responsiveness */
 }
 
-/* Problematic grid layout */
+/* Section layouts - better spacing */
+section {
+    margin-bottom: 4rem;
+}
+
+/* Grid system - better but with issues */
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     /* No gap property */
-    /* No media queries for responsive behavior */
+    /* No media queries */
 }
 
-/* Hero section layout problems */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Hero section layout - more modern but still with issues */
 .hero-section {
-    height: 400px;
-    /* Using fixed height instead of min-height */
-    background-image: url("../images/hero.jpg");
-    /* No background size or position */
-    padding: 20px;
-    /* Text not centered */
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* No responsive adjustments */
 }
 
-/* Featured events section */
-.featured-events {
-    padding: 20px;
-    /* No proper spacing between cards */
+/* Events display - flexbox layout */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px; /* Negative margin technique - can be confusing */
 }
 
-.event-cards {
-    /* Should use grid or flexbox but doesn't */
+.event-card {
+    flex: 0 0 calc(33.333% - 30px); /* Fixed calculation - not responsive */
+    margin: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: white;
+    transition: transform 0.3s;
 }
 
-/* Team section layout */
-.team-preview table {
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card img {
     width: 100%;
-    /* Missing proper table styling */
+    height: 200px;
+    object-fit: cover;
 }
 
-/* About page specific layout */
+.event-card h3,
+.event-card p {
+    padding: 0 20px;
+}
+
+.event-card .register {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    /* Not accessible - should be a button */
+    /* No hover state */
+}
+
+/* About page layout */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.mission {
+    background-color: #f8f9fa;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 800px;
+    /* No responsive adjustments */
+}
+
+/* Timeline layout - more visual but with positioning issues */
 .timeline {
-    /* No layout defined for timeline items */
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
 }
 
-/* Missing responsive adjustments */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #3498db;
+    transform: translateX(-50%);
+}
+
+.timeline > div {
+    position: relative;
+    margin-bottom: 2rem;
+    /* No proper structure for timeline items */
+    /* No responsive behavior */
+}
+
+/* Form layout with issues */
+.propose-event {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.propose-event h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Mobile menu issues */
+.mobile-toggle {
+    display: none; /* Hidden on desktop */
+    /* No media query to show on mobile */
+}
+
+/* Problematic footer layout */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    /* No proper column structure */
+    /* No proper spacing */
+}
+
+/* Responsive issues - incomplete media queries */
+@media (max-width: 1200px) {
+    .container {
+        width: 100%; /* Good but missing max-width */
+    }
+}
+
 @media (max-width: 768px) {
-    /* Empty media query */
+    /* Nav is missing a mobile design */
+    
+    .grid,
+    .grid-2,
+    .grid-4 {
+        /* Missing responsive grid adjustments */
+    }
+    
+    .event-card {
+        /* Missing responsive adjustments */
+    }
+    
+    .timeline::before {
+        /* Should adjust position for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Missing additional mobile adjustments */
 }

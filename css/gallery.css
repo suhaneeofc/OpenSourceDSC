@@ -1,0 +1,203 @@
+/* Gallery specific styles with intentional issues */
+
+.gallery-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #f5f7fa;
+}
+
+.gallery-header h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.gallery-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Filter controls - visual but with accessibility issues */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    /* No proper focus states */
+}
+
+.gallery-filters span {
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 30px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* Not keyboard accessible */
+    /* Should be buttons */
+}
+
+.gallery-filters span.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.gallery-filters span:hover {
+    background-color: #ddd;
+}
+
+.gallery-filters span.active:hover {
+    background-color: #2980b9;
+}
+
+/* Gallery grid - visually nice but with layout issues */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+    /* No responsive adjustments */
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 250px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    /* No keyboard interaction */
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* No alt text in JS generation */
+}
+
+/* Missing caption styling */
+
+.empty-gallery {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    color: #999;
+    font-style: italic;
+}
+
+/* Lightbox - incomplete implementation */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    /* Missing animation */
+    /* Missing proper centering */
+}
+
+.lightbox-content {
+    display: block;
+    margin: 5% auto;
+    max-width: 80%;
+    max-height: 80%;
+    /* Not responsive for mobile */
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    /* Not accessible - needs more contrast */
+    /* No focus state */
+}
+
+#lightbox-caption {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    /* Poor contrast with background */
+}
+
+/* Upload section - styling issues */
+.upload-section {
+    background-color: #f5f7fa;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.upload-section h2 {
+    margin-bottom: 1rem;
+}
+
+.upload-section p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #666;
+}
+
+.upload-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-section input,
+.upload-section select {
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* No focus states */
+}
+
+.upload-section input[type="file"] {
+    padding: 0.5rem 0;
+    /* No proper styling */
+}
+
+.upload-section button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    /* No hover states */
+}
+
+/* Missing pagination controls styling */
+
+/* Missing category indicators on images */
+
+/* Missing loading animations */
+
+/* Missing mobile optimizations */
+@media (max-width: 768px) {
+    /* Empty media query */
+}
+
+/* Dark mode adjustments - incomplete */
+.dark-mode .gallery-header {
+    background-color: #333;
+    /* Text color not adjusted */
+}
+
+.dark-mode .upload-section {
+    /* Missing dark mode styling */
+}
