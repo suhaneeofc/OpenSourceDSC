@@ -2,8 +2,9 @@
 
 <br>
 
+<p align="center">
 ![DSC Banner](https://gdscjgec.github.io/assets/logo.png)
-
+</p>
 Hey there!
 
 Welcome to **OpenSourceDSC**, a friendly and beginner-friendly repository created by the Developer Student Club (DSC) at NIT Hamirpur!
