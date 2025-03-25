@@ -4,7 +4,6 @@
     <title>Gallery - Tech Club</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/layout.css">
-    <!-- Missing custom gallery stylesheet -->
 </head>
 <body>
     <header>
@@ -26,12 +25,10 @@
         <button id="dark-mode-toggle">Dark Mode</button>
     </header>
 
-    <!-- Missing main tag -->
     <div class="gallery-header">
         <h1>Our Event Gallery</h1>
         <p>Memories from our past events and activities</p>
         
-        <!-- Filter controls without proper accessibility -->
         <div class="gallery-filters">
             <span class="active" onclick="filterGallery('all')">All</span>
             <span onclick="filterGallery('hackathon')">Hackathons</span>
@@ -40,28 +37,20 @@
         </div>
     </div>
     
-    <!-- Gallery container with no semantic structure -->
     <div class="gallery-container">
-        <!-- Images will be loaded by JavaScript -->
-        <!-- Placeholder for empty state -->
         <p class="empty-gallery">Loading gallery images...</p>
     </div>
     
-    <!-- Missing pagination controls -->
-    
-    <!-- Lightbox that doesn't work -->
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
         <div id="lightbox-caption"></div>
     </div>
     
-    <!-- Upload section with form issues -->
     <div class="upload-section">
         <h2>Share Your Photos</h2>
         <p>Have photos from our events? Share them with the community!</p>
         <form>
-            <!-- Missing form labels -->
             <input type="text" placeholder="Your Name">
             <input type="email" placeholder="Your Email">
             <select>
@@ -100,6 +89,5 @@
     </footer>
     
     <script src="js/main.js"></script>
-    <!-- Missing gallery-specific JavaScript -->
 </body>
 </html>

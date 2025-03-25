@@ -1,4 +1,3 @@
-// Project data management
 const projects = [
     {
         title: "E-commerce Platform",
@@ -12,7 +11,6 @@ const projects = [
     }
 ];
 
-// Dynamically render project cards
 function renderProjects() {
     const projectContainer = document.querySelector('.project-container');
     
@@ -32,14 +30,12 @@ function renderProjects() {
     });
 }
 
-// Form validation and submission
 function setupContactForm() {
     const form = document.getElementById('contact-form');
     
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        // Basic form validation
         const name = form.name.value.trim();
         const email = form.email.value.trim();
         const message = form.message.value.trim();
@@ -49,12 +45,10 @@ function setupContactForm() {
             return;
         }
         
-        // Placeholder for form submission logic
         console.log('Form submitted', { name, email, message });
     });
 }
 
-// Initialize page
 function initPage() {
     renderProjects();
     setupContactForm();
