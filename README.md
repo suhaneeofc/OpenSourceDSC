@@ -2,7 +2,7 @@
 
 <br>
 
-![DSC Banner](https://developers.google.com/community/gdsc/images/gdsc-social-share.png)
+![DSC Banner](https://gdscjgec.github.io/assets/logo.png)
 
 Hey there!
 
@@ -55,7 +55,7 @@ git push origin main
 ## Rules and Guidelines
 
 - Be respectful and kind
-- Encourage others — we're all learning!
+- Encourage others we're all learning!
 - Do not spam PRs. If an issue has been assigned to anyone or a if PR for the issue has already been opened please do not open another PR for the issue
 - Feel free to ask questions about the codebase from the mentors. We are here to help you in every way possible so don't hesitate
 - Have fun!
