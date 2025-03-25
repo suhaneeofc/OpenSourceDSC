@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-![DSC Banner](https://gdscjgec.github.io/assets/logo.png)
+    <img src="https://gdscjgec.github.io/assets/logo.png" alt="logo">
 </p>
 Hey there!
 
